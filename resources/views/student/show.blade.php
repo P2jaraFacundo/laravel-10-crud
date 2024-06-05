@@ -47,9 +47,31 @@
                 <div class="row">
                     <label for="description" class="col-md-4 col-form-label text-md-end text-start"><strong>Group:</strong></label>
                     <div class="col-md-6" style="line-height: 35px;">
+                        {{ $student->year }}
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <label for="description" class="col-md-4 col-form-label text-md-end text-start"><strong>Group:</strong></label>
+                    <div class="col-md-6" style="line-height: 35px;">
                         {{ $student->group }}
                     </div>
                 </div>
+
+                <div class="row">
+                    <label for="description" class="col-md-4 col-form-label text-md-end text-start"><strong>Condition:</strong></label>
+                    <div class="col-md-6" style="line-height: 35px;">
+                        @if($condition === 'Promotion')
+                            <span style="color: blue;">{{ $condition }}</span>
+                        @elseif($condition === 'Regular')
+                            <span style="color: green;">{{ $condition }}</span>
+                        @else
+                            <span style="color: red;">{{ $condition }}</span>
+                        @endif
+                        ({{ $Percentaje }}%)
+                    </div>
+                </div>
+                
         
                 <div class="card-body">
                     <form action="{{ route('students.storeAssist') }}" method="post">

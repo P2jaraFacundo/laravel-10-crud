@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('surname');
             $table->date('date_of_birth');
-            $table->string('group')->nullable();
+            $table->integer('year');
+            $table->string('group');
 
 
             $table->timestamps();

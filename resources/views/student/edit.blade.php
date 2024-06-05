@@ -74,6 +74,16 @@
                             @endif
                         </div>
                     </div>
+
+                    <div class="mb-3 row">
+                        <label for="year" class="col-md-4 col-form-label text-md-end text-start">Year</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control @error('year') is-invalid @enderror" id="year" name="year" value="{{ $student->year }}">
+                            @if ($errors->has('year'))
+                                <span class="text-danger">{{ $errors->first('year') }}</span>
+                            @endif
+                        </div>
+                    </div>
                     
                     <div class="mb-3 row">
                         <input type="submit" class="col-md-3 offset-md-5 btn btn-primary" value="Update">

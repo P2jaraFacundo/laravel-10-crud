@@ -27,6 +27,7 @@ class UpdateStudentRequest extends FormRequest
             'name' => 'required|string|max:255',
             'surname' => 'required|string|max:255',
             'date_of_birth' => 'required|date_format:Y-m-d',
+            'group' => 'nullable|integer|max:255',
             'group' => 'nullable|string|max:255',
         ];
     }

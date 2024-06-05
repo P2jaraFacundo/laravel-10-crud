@@ -54,7 +54,7 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
         // Otros middlewares...
-      'log' => \App\Http\Middleware\LogActions::class, // Agrega el middleware LogActions aquí
+    'admin' => \App\Http\Middleware\VerifyRole::class,
     ];
 
     /**
