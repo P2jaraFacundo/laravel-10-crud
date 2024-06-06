@@ -21,7 +21,7 @@
                     <div class="col-md-6" style="line-height: 35px;">
                         <ul>
                             @forelse($assists as $assist)
-                                <li>📌 {{ $assist->assist }}</li> <!-- Muestra la fecha de asistencia -->
+                                <li>✅ {{ $assist->assist }}</li> <!-- Muestra la fecha de asistencia -->
                             @empty
                                 <li>❌ No assists found</li>
                             @endforelse

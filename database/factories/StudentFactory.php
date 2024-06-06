@@ -18,6 +18,7 @@ class StudentFactory extends Factory
     {
 
         $grupo = ['A', 'B'];
+        $year = ['1', '2', '3'];
 
         return [
             
@@ -25,6 +26,7 @@ class StudentFactory extends Factory
             'name' => $this->faker->firstName,
             'surname' => $this->faker->lastName,
             'date_of_birth' => $this->faker->date('Y-m-d', '-20 years'),
+            'year' => $this->faker->randomElement($year),
             'group' => $this->faker->randomElement($grupo),
 
         ];

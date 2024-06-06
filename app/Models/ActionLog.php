@@ -9,5 +9,10 @@ class ActionLog extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['action', 'ip', 'timestamp'];
+    protected $fillable = ['user_id','timestamp','action', 'ip','browser'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

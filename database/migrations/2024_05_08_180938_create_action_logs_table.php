@@ -9,11 +9,18 @@ class CreateActionLogsTable extends Migration
     public function up()
     {
         Schema::create('action_logs', function (Blueprint $table) {
+            
             $table->id();
             
+
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            
+            $table->timestamp('timestamp')->nullable();
             $table->string('action');
             $table->ipAddress('ip');
-            $table->timestamp('timestamp')->nullable();
+            $table->string('browser');
+            
             
             
             $table->timestamps();

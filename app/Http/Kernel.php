@@ -36,7 +36,7 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-           \App\Http\Middleware\LogActions::class, // Agrega el middleware LogActions aquí
+           \App\Http\Middleware\LogActions::class, // Acciones ABM
         ],
 
         'api' => [
@@ -54,7 +54,7 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
         // Otros middlewares...
-      'log' => \App\Http\Middleware\LogActions::class, // Agrega el middleware LogActions aquí
+    'admin' => \App\Http\Middleware\VerifyRole::class,
     ];
 
     /**

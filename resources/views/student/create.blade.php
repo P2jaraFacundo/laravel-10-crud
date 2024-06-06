@@ -40,7 +40,7 @@
                     <div class="mb-3 row">
                         <label for="surname" class="col-md-4 col-form-label text-md-end text-start">Surname</label>
                         <div class="col-md-6">
-                          <input type="text" class="form-control @error('surname') is-invalid @enderror" id="surname" name="surname" value="{{ old('surname') }}">
+                        <input type="text" class="form-control @error('surname') is-invalid @enderror" id="surname" name="surname" value="{{ old('surname') }}">
                             @if ($errors->has('surname'))
                                 <span class="text-danger">{{ $errors->first('surname') }}</span>
                             @endif
@@ -50,9 +50,19 @@
                     <div class="mb-3 row">
                         <label for="date_of_birth" class="col-md-4 col-form-label text-md-end text-start">Date of Birth</label>
                         <div class="col-md-6">
-                          <input type="date" class="form-control @error('date_of_birth') is-invalid @enderror" id="date_of_birth" name="date_of_birth" value="{{ old('date_of_birth') }}">
+                        <input type="date" class="form-control @error('date_of_birth') is-invalid @enderror" id="date_of_birth" name="date_of_birth" value="{{ old('date_of_birth') }}">
                             @if ($errors->has('date_of_birth'))
                                 <span class="text-danger">{{ $errors->first('date_of_birth') }}</span>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="year" class="col-md-4 col-form-label text-md-end text-start">Year</label>
+                        <div class="col-md-6">
+                        <input type="text" class="form-control @error('year') is-invalid @enderror" id="year" name="year" value="{{ old('year') }}">
+                            @if ($errors->has('year'))
+                                <span class="text-danger">{{ $errors->first('year') }}</span>
                             @endif
                         </div>
                     </div>

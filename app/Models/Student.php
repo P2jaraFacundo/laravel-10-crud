@@ -14,6 +14,7 @@ class Student extends Model
         'name',
         'surname',
         'date_of_birth',
+        'year',
         'group'
     ];
 
